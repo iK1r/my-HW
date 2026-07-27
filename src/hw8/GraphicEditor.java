@@ -1,3 +1,5 @@
+package hw8;
+
 public class GraphicEditor {
     public static void main(String[] args) {
         ShapePrinter printer = new ShapePrinter();
