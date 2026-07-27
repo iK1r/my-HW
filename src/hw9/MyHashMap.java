@@ -77,13 +77,13 @@ public class MyHashMap {
             return 0;
         }
 
-        int hash = key.hashCode();
+        int index = key.hashCode() % table.length;
 
-        if (hash < 0) {
-            hash = -hash;
+        if (index < 0) {
+            index = -index;
         }
 
-        return hash % table.length;
+        return index;
     }
 
     private boolean isKeysEquals(Object firstKey, Object secondKey) {
